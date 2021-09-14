@@ -1,0 +1,2351 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  portfolio:
+    type: page
+    label: Portfolio
+    folder: _portfolio
+    match: '*'
+    fields:
+      - type: object
+        name: caption
+        label: Caption
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: subtitle
+            label: Subtitle
+          - type: string
+            name: thumbnail
+            label: Thumbnail
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: image
+        label: Image
+      - type: string
+        name: alt
+        label: Alt
+  page_1:
+    type: page
+    label: Page 1
+    match: '*'
+    exclude:
+      - legal.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+  page_2:
+    type: page
+    label: Page 2
+    match: '*'
+    exclude:
+      - index.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: background
+        label: Background
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: object
+        name: en
+        label: En
+        fields:
+          - type: object
+            name: header
+            label: Header
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: button
+                label: Button
+              - type: string
+                name: buttonlink
+                label: Buttonlink
+          - type: object
+            name: services
+            label: Services
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: list
+                name: list
+                label: List
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: title
+                      label: Title
+                    - type: markdown
+                      name: desc
+                      label: Desc
+                    - type: string
+                      name: icon
+                      label: Icon
+          - type: object
+            name: portfolio
+            label: Portfolio
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: string
+                name: closebutton
+                label: Closebutton
+          - type: object
+            name: timeline
+            label: Timeline
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: list
+                name: events
+                label: Events
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: title
+                      label: Title
+                    - type: string
+                      name: year
+                      label: Year
+                    - type: markdown
+                      name: desc
+                      label: Desc
+                    - type: image
+                      name: image
+                      label: Image
+                    - type: string
+                      name: alt
+                      label: Alt
+                    - type: string
+                      name: align
+                      label: Align
+              - type: markdown
+                name: end
+                label: End
+          - type: object
+            name: about
+            label: About
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: markdown
+                name: body
+                label: Body
+              - type: string
+                name: section
+                label: Section
+          - type: object
+            name: clients
+            label: Clients
+            fields:
+              - type: string
+                name: section
+                label: Section
+              - type: string
+                name: max-height
+                label: Max Height
+              - type: string
+                name: horizontal-scrolling
+                label: Horizontal Scrolling
+              - type: list
+                name: list
+                label: List
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: title
+                      label: Title
+                    - type: string
+                      name: url
+                      label: Url
+                    - type: image
+                      name: logo
+                      label: Logo
+          - type: object
+            name: team
+            label: Team
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: markdown
+                name: subtext
+                label: Subtext
+              - type: string
+                name: section
+                label: Section
+              - type: list
+                name: people
+                label: People
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: name
+                      label: Name
+                    - type: string
+                      name: role
+                      label: Role
+                    - type: image
+                      name: image
+                      label: Image
+                    - type: list
+                      name: social
+                      label: Social
+                      items:
+                        type: object
+                        fields:
+                          - type: string
+                            name: url
+                            label: Url
+                          - type: string
+                            name: icon
+                            label: Icon
+          - type: object
+            name: contact
+            label: Contact
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: name-validation
+                label: Name Validation
+              - type: string
+                name: email
+                label: Email
+              - type: string
+                name: email-validation
+                label: Email Validation
+              - type: string
+                name: phone
+                label: Phone
+              - type: string
+                name: phone-validation
+                label: Phone Validation
+              - type: string
+                name: message
+                label: Message
+              - type: string
+                name: message-validation
+                label: Message Validation
+              - type: string
+                name: subject
+                label: Subject
+              - type: string
+                name: submit
+                label: Submit
+          - type: object
+            name: footer
+            label: Footer
+            fields:
+              - type: string
+                name: legal
+                label: Legal
+              - type: list
+                name: social
+                label: Social
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: url
+                      label: Url
+                    - type: string
+                      name: icon
+                      label: Icon
+          - type: list
+            name: nav
+            label: Nav
+            items:
+              type: model
+              models:
+                - object_ee61gwkuwn
+                - object_c3i2t0p2ay
+      - type: object
+        name: en-US
+        label: En US
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: object
+                name: header
+                label: Header
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: button
+                    label: Button
+                  - type: string
+                    name: buttonlink
+                    label: Buttonlink
+              - type: object
+                name: services
+                label: Services
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: object
+                name: portfolio
+                label: Portfolio
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: closebutton
+                    label: Closebutton
+              - type: object
+                name: timeline
+                label: Timeline
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: events
+                    label: Events
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: year
+                          label: Year
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: string
+                          name: alt
+                          label: Alt
+                        - type: string
+                          name: align
+                          label: Align
+                  - type: markdown
+                    name: end
+                    label: End
+              - type: object
+                name: about
+                label: About
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: body
+                    label: Body
+                  - type: string
+                    name: section
+                    label: Section
+              - type: object
+                name: clients
+                label: Clients
+                fields:
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: max-height
+                    label: Max Height
+                  - type: string
+                    name: horizontal-scrolling
+                    label: Horizontal Scrolling
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: image
+                          name: logo
+                          label: Logo
+              - type: object
+                name: team
+                label: Team
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: subtext
+                    label: Subtext
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: people
+                    label: People
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: name
+                          label: Name
+                        - type: string
+                          name: role
+                          label: Role
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: list
+                          name: social
+                          label: Social
+                          items:
+                            type: object
+                            fields:
+                              - type: string
+                                name: url
+                                label: Url
+                              - type: string
+                                name: icon
+                                label: Icon
+              - type: object
+                name: contact
+                label: Contact
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: name
+                    label: Name
+                  - type: string
+                    name: name-validation
+                    label: Name Validation
+                  - type: string
+                    name: email
+                    label: Email
+                  - type: string
+                    name: email-validation
+                    label: Email Validation
+                  - type: string
+                    name: phone
+                    label: Phone
+                  - type: string
+                    name: phone-validation
+                    label: Phone Validation
+                  - type: string
+                    name: message
+                    label: Message
+                  - type: string
+                    name: message-validation
+                    label: Message Validation
+                  - type: string
+                    name: subject
+                    label: Subject
+                  - type: string
+                    name: submit
+                    label: Submit
+              - type: object
+                name: footer
+                label: Footer
+                fields:
+                  - type: string
+                    name: legal
+                    label: Legal
+                  - type: list
+                    name: social
+                    label: Social
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: list
+                name: nav
+                label: Nav
+                items:
+                  type: model
+                  models:
+                    - object_wd01j36n1h
+                    - object_mwq1yu3mcs
+      - type: object
+        name: en-CA
+        label: En CA
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: object
+                name: header
+                label: Header
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: button
+                    label: Button
+                  - type: string
+                    name: buttonlink
+                    label: Buttonlink
+              - type: object
+                name: services
+                label: Services
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: object
+                name: portfolio
+                label: Portfolio
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: closebutton
+                    label: Closebutton
+              - type: object
+                name: timeline
+                label: Timeline
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: events
+                    label: Events
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: year
+                          label: Year
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: string
+                          name: alt
+                          label: Alt
+                        - type: string
+                          name: align
+                          label: Align
+                  - type: markdown
+                    name: end
+                    label: End
+              - type: object
+                name: about
+                label: About
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: body
+                    label: Body
+                  - type: string
+                    name: section
+                    label: Section
+              - type: object
+                name: clients
+                label: Clients
+                fields:
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: max-height
+                    label: Max Height
+                  - type: string
+                    name: horizontal-scrolling
+                    label: Horizontal Scrolling
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: image
+                          name: logo
+                          label: Logo
+              - type: object
+                name: team
+                label: Team
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: subtext
+                    label: Subtext
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: people
+                    label: People
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: name
+                          label: Name
+                        - type: string
+                          name: role
+                          label: Role
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: list
+                          name: social
+                          label: Social
+                          items:
+                            type: object
+                            fields:
+                              - type: string
+                                name: url
+                                label: Url
+                              - type: string
+                                name: icon
+                                label: Icon
+              - type: object
+                name: contact
+                label: Contact
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: name
+                    label: Name
+                  - type: string
+                    name: name-validation
+                    label: Name Validation
+                  - type: string
+                    name: email
+                    label: Email
+                  - type: string
+                    name: email-validation
+                    label: Email Validation
+                  - type: string
+                    name: phone
+                    label: Phone
+                  - type: string
+                    name: phone-validation
+                    label: Phone Validation
+                  - type: string
+                    name: message
+                    label: Message
+                  - type: string
+                    name: message-validation
+                    label: Message Validation
+                  - type: string
+                    name: subject
+                    label: Subject
+                  - type: string
+                    name: submit
+                    label: Submit
+              - type: object
+                name: footer
+                label: Footer
+                fields:
+                  - type: string
+                    name: legal
+                    label: Legal
+                  - type: list
+                    name: social
+                    label: Social
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: list
+                name: nav
+                label: Nav
+                items:
+                  type: model
+                  models:
+                    - object_qbazq6z012
+                    - object_oc7pyxv2i4
+      - type: object
+        name: en-GB
+        label: En GB
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: object
+                name: header
+                label: Header
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: button
+                    label: Button
+                  - type: string
+                    name: buttonlink
+                    label: Buttonlink
+              - type: object
+                name: services
+                label: Services
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: object
+                name: portfolio
+                label: Portfolio
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: closebutton
+                    label: Closebutton
+              - type: object
+                name: timeline
+                label: Timeline
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: events
+                    label: Events
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: year
+                          label: Year
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: string
+                          name: alt
+                          label: Alt
+                        - type: string
+                          name: align
+                          label: Align
+                  - type: markdown
+                    name: end
+                    label: End
+              - type: object
+                name: about
+                label: About
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: body
+                    label: Body
+                  - type: string
+                    name: section
+                    label: Section
+              - type: object
+                name: clients
+                label: Clients
+                fields:
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: max-height
+                    label: Max Height
+                  - type: string
+                    name: horizontal-scrolling
+                    label: Horizontal Scrolling
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: image
+                          name: logo
+                          label: Logo
+              - type: object
+                name: team
+                label: Team
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: subtext
+                    label: Subtext
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: people
+                    label: People
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: name
+                          label: Name
+                        - type: string
+                          name: role
+                          label: Role
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: list
+                          name: social
+                          label: Social
+                          items:
+                            type: object
+                            fields:
+                              - type: string
+                                name: url
+                                label: Url
+                              - type: string
+                                name: icon
+                                label: Icon
+              - type: object
+                name: contact
+                label: Contact
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: name
+                    label: Name
+                  - type: string
+                    name: name-validation
+                    label: Name Validation
+                  - type: string
+                    name: email
+                    label: Email
+                  - type: string
+                    name: email-validation
+                    label: Email Validation
+                  - type: string
+                    name: phone
+                    label: Phone
+                  - type: string
+                    name: phone-validation
+                    label: Phone Validation
+                  - type: string
+                    name: message
+                    label: Message
+                  - type: string
+                    name: message-validation
+                    label: Message Validation
+                  - type: string
+                    name: subject
+                    label: Subject
+                  - type: string
+                    name: submit
+                    label: Submit
+              - type: object
+                name: footer
+                label: Footer
+                fields:
+                  - type: string
+                    name: legal
+                    label: Legal
+                  - type: list
+                    name: social
+                    label: Social
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: list
+                name: nav
+                label: Nav
+                items:
+                  type: model
+                  models:
+                    - object_d39jarqxxf
+                    - object_0vgwe40jdj
+      - type: object
+        name: en-AU
+        label: En AU
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: object
+                name: header
+                label: Header
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: button
+                    label: Button
+                  - type: string
+                    name: buttonlink
+                    label: Buttonlink
+              - type: object
+                name: services
+                label: Services
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: object
+                name: portfolio
+                label: Portfolio
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: closebutton
+                    label: Closebutton
+              - type: object
+                name: timeline
+                label: Timeline
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: events
+                    label: Events
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: year
+                          label: Year
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: string
+                          name: alt
+                          label: Alt
+                        - type: string
+                          name: align
+                          label: Align
+                  - type: markdown
+                    name: end
+                    label: End
+              - type: object
+                name: about
+                label: About
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: body
+                    label: Body
+                  - type: string
+                    name: section
+                    label: Section
+              - type: object
+                name: clients
+                label: Clients
+                fields:
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: max-height
+                    label: Max Height
+                  - type: string
+                    name: horizontal-scrolling
+                    label: Horizontal Scrolling
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: image
+                          name: logo
+                          label: Logo
+              - type: object
+                name: team
+                label: Team
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: subtext
+                    label: Subtext
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: people
+                    label: People
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: name
+                          label: Name
+                        - type: string
+                          name: role
+                          label: Role
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: list
+                          name: social
+                          label: Social
+                          items:
+                            type: object
+                            fields:
+                              - type: string
+                                name: url
+                                label: Url
+                              - type: string
+                                name: icon
+                                label: Icon
+              - type: object
+                name: contact
+                label: Contact
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: name
+                    label: Name
+                  - type: string
+                    name: name-validation
+                    label: Name Validation
+                  - type: string
+                    name: email
+                    label: Email
+                  - type: string
+                    name: email-validation
+                    label: Email Validation
+                  - type: string
+                    name: phone
+                    label: Phone
+                  - type: string
+                    name: phone-validation
+                    label: Phone Validation
+                  - type: string
+                    name: message
+                    label: Message
+                  - type: string
+                    name: message-validation
+                    label: Message Validation
+                  - type: string
+                    name: subject
+                    label: Subject
+                  - type: string
+                    name: submit
+                    label: Submit
+              - type: object
+                name: footer
+                label: Footer
+                fields:
+                  - type: string
+                    name: legal
+                    label: Legal
+                  - type: list
+                    name: social
+                    label: Social
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: list
+                name: nav
+                label: Nav
+                items:
+                  type: model
+                  models:
+                    - object_hj2l92546f
+                    - object_66e4sl3mnl
+      - type: object
+        name: es
+        label: Es
+        fields:
+          - type: object
+            name: header
+            label: Header
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: button
+                label: Button
+              - type: string
+                name: buttonlink
+                label: Buttonlink
+          - type: object
+            name: services
+            label: Services
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: list
+                name: list
+                label: List
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: title
+                      label: Title
+                    - type: markdown
+                      name: desc
+                      label: Desc
+                    - type: string
+                      name: icon
+                      label: Icon
+          - type: object
+            name: portfolio
+            label: Portfolio
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: string
+                name: closebutton
+                label: Closebutton
+          - type: object
+            name: timeline
+            label: Timeline
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: list
+                name: events
+                label: Events
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: title
+                      label: Title
+                    - type: string
+                      name: year
+                      label: Year
+                    - type: markdown
+                      name: desc
+                      label: Desc
+                    - type: image
+                      name: image
+                      label: Image
+                    - type: string
+                      name: alt
+                      label: Alt
+                    - type: string
+                      name: align
+                      label: Align
+              - type: markdown
+                name: end
+                label: End
+          - type: object
+            name: about
+            label: About
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: markdown
+                name: body
+                label: Body
+              - type: string
+                name: section
+                label: Section
+          - type: object
+            name: clients
+            label: Clients
+            fields:
+              - type: string
+                name: section
+                label: Section
+              - type: string
+                name: max-height
+                label: Max Height
+              - type: string
+                name: horizontal-scrolling
+                label: Horizontal Scrolling
+              - type: list
+                name: list
+                label: List
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: title
+                      label: Title
+                    - type: string
+                      name: url
+                      label: Url
+                    - type: image
+                      name: logo
+                      label: Logo
+          - type: object
+            name: team
+            label: Team
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: markdown
+                name: subtext
+                label: Subtext
+              - type: string
+                name: section
+                label: Section
+              - type: list
+                name: people
+                label: People
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: name
+                      label: Name
+                    - type: string
+                      name: role
+                      label: Role
+                    - type: image
+                      name: image
+                      label: Image
+                    - type: list
+                      name: social
+                      label: Social
+                      items:
+                        type: object
+                        fields:
+                          - type: string
+                            name: url
+                            label: Url
+                          - type: string
+                            name: icon
+                            label: Icon
+          - type: object
+            name: contact
+            label: Contact
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: section
+                label: Section
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: name-validation
+                label: Name Validation
+              - type: string
+                name: email
+                label: Email
+              - type: string
+                name: email-validation
+                label: Email Validation
+              - type: string
+                name: phone
+                label: Phone
+              - type: string
+                name: phone-validation
+                label: Phone Validation
+              - type: string
+                name: message
+                label: Message
+              - type: string
+                name: message-validation
+                label: Message Validation
+              - type: string
+                name: subject
+                label: Subject
+              - type: string
+                name: submit
+                label: Submit
+          - type: object
+            name: footer
+            label: Footer
+            fields:
+              - type: string
+                name: legal
+                label: Legal
+              - type: list
+                name: social
+                label: Social
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: url
+                      label: Url
+                    - type: string
+                      name: icon
+                      label: Icon
+          - type: list
+            name: nav
+            label: Nav
+            items:
+              type: model
+              models:
+                - object_o42429qs67
+                - object_1n3hubtuxh
+      - type: object
+        name: es-ES
+        label: Es ES
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: object
+                name: header
+                label: Header
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: button
+                    label: Button
+                  - type: string
+                    name: buttonlink
+                    label: Buttonlink
+              - type: object
+                name: services
+                label: Services
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: object
+                name: portfolio
+                label: Portfolio
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: closebutton
+                    label: Closebutton
+              - type: object
+                name: timeline
+                label: Timeline
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: events
+                    label: Events
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: year
+                          label: Year
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: string
+                          name: alt
+                          label: Alt
+                        - type: string
+                          name: align
+                          label: Align
+                  - type: markdown
+                    name: end
+                    label: End
+              - type: object
+                name: about
+                label: About
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: body
+                    label: Body
+                  - type: string
+                    name: section
+                    label: Section
+              - type: object
+                name: clients
+                label: Clients
+                fields:
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: max-height
+                    label: Max Height
+                  - type: string
+                    name: horizontal-scrolling
+                    label: Horizontal Scrolling
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: image
+                          name: logo
+                          label: Logo
+              - type: object
+                name: team
+                label: Team
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: subtext
+                    label: Subtext
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: people
+                    label: People
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: name
+                          label: Name
+                        - type: string
+                          name: role
+                          label: Role
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: list
+                          name: social
+                          label: Social
+                          items:
+                            type: object
+                            fields:
+                              - type: string
+                                name: url
+                                label: Url
+                              - type: string
+                                name: icon
+                                label: Icon
+              - type: object
+                name: contact
+                label: Contact
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: name
+                    label: Name
+                  - type: string
+                    name: name-validation
+                    label: Name Validation
+                  - type: string
+                    name: email
+                    label: Email
+                  - type: string
+                    name: email-validation
+                    label: Email Validation
+                  - type: string
+                    name: phone
+                    label: Phone
+                  - type: string
+                    name: phone-validation
+                    label: Phone Validation
+                  - type: string
+                    name: message
+                    label: Message
+                  - type: string
+                    name: message-validation
+                    label: Message Validation
+                  - type: string
+                    name: subject
+                    label: Subject
+                  - type: string
+                    name: submit
+                    label: Submit
+              - type: object
+                name: footer
+                label: Footer
+                fields:
+                  - type: string
+                    name: legal
+                    label: Legal
+                  - type: list
+                    name: social
+                    label: Social
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: list
+                name: nav
+                label: Nav
+                items:
+                  type: model
+                  models:
+                    - object_ian5yknn4s
+                    - object_r4wik2n0no
+      - type: object
+        name: es-CO
+        label: Es CO
+        fields:
+          - type: object
+            name: '<<'
+            label: ''
+            fields:
+              - type: object
+                name: header
+                label: Header
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: button
+                    label: Button
+                  - type: string
+                    name: buttonlink
+                    label: Buttonlink
+              - type: object
+                name: services
+                label: Services
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: object
+                name: portfolio
+                label: Portfolio
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: closebutton
+                    label: Closebutton
+              - type: object
+                name: timeline
+                label: Timeline
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: events
+                    label: Events
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: year
+                          label: Year
+                        - type: markdown
+                          name: desc
+                          label: Desc
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: string
+                          name: alt
+                          label: Alt
+                        - type: string
+                          name: align
+                          label: Align
+                  - type: markdown
+                    name: end
+                    label: End
+              - type: object
+                name: about
+                label: About
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: body
+                    label: Body
+                  - type: string
+                    name: section
+                    label: Section
+              - type: object
+                name: clients
+                label: Clients
+                fields:
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: max-height
+                    label: Max Height
+                  - type: string
+                    name: horizontal-scrolling
+                    label: Horizontal Scrolling
+                  - type: list
+                    name: list
+                    label: List
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: title
+                          label: Title
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: image
+                          name: logo
+                          label: Logo
+              - type: object
+                name: team
+                label: Team
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: markdown
+                    name: subtext
+                    label: Subtext
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: list
+                    name: people
+                    label: People
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: name
+                          label: Name
+                        - type: string
+                          name: role
+                          label: Role
+                        - type: image
+                          name: image
+                          label: Image
+                        - type: list
+                          name: social
+                          label: Social
+                          items:
+                            type: object
+                            fields:
+                              - type: string
+                                name: url
+                                label: Url
+                              - type: string
+                                name: icon
+                                label: Icon
+              - type: object
+                name: contact
+                label: Contact
+                fields:
+                  - type: string
+                    name: title
+                    label: Title
+                  - type: string
+                    name: text
+                    label: Text
+                  - type: string
+                    name: section
+                    label: Section
+                  - type: string
+                    name: name
+                    label: Name
+                  - type: string
+                    name: name-validation
+                    label: Name Validation
+                  - type: string
+                    name: email
+                    label: Email
+                  - type: string
+                    name: email-validation
+                    label: Email Validation
+                  - type: string
+                    name: phone
+                    label: Phone
+                  - type: string
+                    name: phone-validation
+                    label: Phone Validation
+                  - type: string
+                    name: message
+                    label: Message
+                  - type: string
+                    name: message-validation
+                    label: Message Validation
+                  - type: string
+                    name: subject
+                    label: Subject
+                  - type: string
+                    name: submit
+                    label: Submit
+              - type: object
+                name: footer
+                label: Footer
+                fields:
+                  - type: string
+                    name: legal
+                    label: Legal
+                  - type: list
+                    name: social
+                    label: Social
+                    items:
+                      type: object
+                      fields:
+                        - type: string
+                          name: url
+                          label: Url
+                        - type: string
+                          name: icon
+                          label: Icon
+              - type: list
+                name: nav
+                label: Nav
+                items:
+                  type: model
+                  models:
+                    - object_qyb6mumhra
+                    - object_j17pmf84vc
+  style:
+    type: data
+    label: Style
+    file: style.yml
+    fields:
+      - type: image
+        name: header-image
+        label: Header Image
+      - type: image
+        name: contact-image
+        label: Contact Image
+  object_ee61gwkuwn:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_c3i2t0p2ay:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_wd01j36n1h:
+    type: object
+    label: Object 3
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_mwq1yu3mcs:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_qbazq6z012:
+    type: object
+    label: Object 5
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_oc7pyxv2i4:
+    type: object
+    label: Object 6
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_d39jarqxxf:
+    type: object
+    label: Object 7
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_0vgwe40jdj:
+    type: object
+    label: Object 8
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_hj2l92546f:
+    type: object
+    label: Object 9
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_66e4sl3mnl:
+    type: object
+    label: Object 10
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_o42429qs67:
+    type: object
+    label: Object 11
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_1n3hubtuxh:
+    type: object
+    label: Object 12
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_ian5yknn4s:
+    type: object
+    label: Object 13
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_r4wik2n0no:
+    type: object
+    label: Object 14
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_qyb6mumhra:
+    type: object
+    label: Object 15
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+  object_j17pmf84vc:
+    type: object
+    label: Object 16
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
