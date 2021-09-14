@@ -11,7 +11,7 @@
 # -----------------
 en: &DEFAULT_EN
   header:
-    title: Poznajsz naszą Salonke!
+    title: Jedź z nami na Wesele
     text: Jedź z nami na Wesele
     button: Tell Me More
     buttonlink: "#services"
