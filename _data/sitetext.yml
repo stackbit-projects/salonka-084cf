@@ -12,7 +12,7 @@
 en: &DEFAULT_EN
   header:
     title: Poznajsz naszą Salonke!
-    text: It's Nice To Meet You
+    text: Jedz
     button: Tell Me More
     buttonlink: "#services"
 
